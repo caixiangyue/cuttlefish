@@ -26,7 +26,7 @@ dl_tgts	:=
 # tools
 #
 ifeq ($(REBAR3),)
-REBAR3	:= $(cache)/rebar3
+REBAR3	:= ./rebar3
 dl_tgts	+= $(REBAR3)
 endif
 export	REBAR3

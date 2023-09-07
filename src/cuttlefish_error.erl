@@ -178,8 +178,8 @@ print({error, ErrorTerm}) ->
     print(lists:flatten(xlate(ErrorTerm)));
 print(String) ->
     try
-        logger:error("~s", [String])
-    catch _:_:_ ->
+        lager:error("~s", [String])
+    catch _:_ ->
         io:format("~s~n", [String]),
         ok
     end.

@@ -123,7 +123,7 @@ invalid(Reason) ->
 %% being logged.
 -spec warn(iodata()) -> ok.
 warn(Str) ->
-    _ = logger:warning(Str, []).
+    _ = lager:warning(Str, []).
 
 -ifdef(TEST).
 
