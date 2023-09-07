@@ -20,7 +20,6 @@
 
 -module(cuttlefish_escript_integration_tests).
 
--include_lib("kernel/include/logger.hrl").
 -include_lib("eunit/include/eunit.hrl").
 
 escript_utf8_test() ->

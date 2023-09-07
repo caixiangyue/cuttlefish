@@ -74,8 +74,6 @@
 -endif.
 -endif.
 
--include_lib("kernel/include/logger.hrl").
-
 -include_lib("eunit/include/eunit.hrl").
 
 %% ===================================================================
@@ -433,7 +431,7 @@ multiple_schema_generate_templated_config_test() ->
                         ], []},
 
     Config = cuttlefish_unit:generate_templated_config("test/sample_mustache.schema", [], Context, PrereqSchema),
-    _ = ?LOG_ERROR("~p", [Config]),
+    _ = logger:error("~p", [Config]),
     assert_config(Config, "app_a.setting_b", "/c/mustache/a.b"),
     ok.
 
